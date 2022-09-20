@@ -1,0 +1,8 @@
+<launch>
+    <node name="rgbd_kinect_dk" pkg="ORB_SLAM2" type="Mono" 
+        args="/home/lj/Documents/ORB_SLAM2_noted/Vocabulary/ORBvoc.txt /home/lj/Documents/ORB_SLAM2_noted/Examples/ROS/ORB_SLAM2/config/kinect_dk.yaml" output="screen">
+        <!-- args="$(find ORB_SLAM2)/../ $(find ORB_SLAM2)/kinect_dk.yaml" output="screen"> -->
+        <remap from="/camera/rgb/image_raw" to="/rgb/image_raw" />
+    </node>
+
+</launch>
